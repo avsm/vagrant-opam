@@ -9,4 +9,5 @@ apt-get update
 apt-get install -y python-software-properties build-essential m4
 add-apt-repository ppa:avsm/ppa
 apt-get update
-apt-get install -y ocaml ocaml-native-compilers camlp4 camlp4-extra opam git libssl-dev emacs vim
+apt-get install -y ocaml ocaml-native-compilers camlp4 camlp4-extra opam git libssl-dev emacs vim nginx
+sed -i -e 's,/usr/share/nginx/html,/home/vagrant/.opam/doc/doc,g' /etc/nginx/sites-available/default
