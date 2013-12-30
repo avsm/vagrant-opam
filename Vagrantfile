@@ -79,7 +79,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # end
 
   config.vm.provision :shell, :path => "bootstrap.sh"
-  config.vm.provision :shell, privileged: false, :path => "setup-user.sh"
+  config.vm.provision :shell, privileged: false, :path => "setup-opam.sh"
+  config.vm.provision :shell, privileged: false, :path => "setup-opamdoc.sh"
+  config.vm.provision :shell, privileged: false, :path => "setup-vim.sh"
 
   # Enable provisioning with chef solo, specifying a cookbooks path, roles
   # path, and data_bags path (all relative to this Vagrantfile), and adding
