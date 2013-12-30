@@ -47,11 +47,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provider :virtualbox do |vb|
     # Boot with headless moe
     vb.gui = false
-    
+
     # Use VBoxManage to customize the VM. For example to change memory:
     vb.customize ["modifyvm", :id, "--memory", "1024"]
   end
-  
+
   # View the documentation for the provider you're using for more
   # information on available options.
 
@@ -82,6 +82,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision :shell, privileged: false, :path => "setup-opam.sh"
   config.vm.provision :shell, privileged: false, :path => "setup-opamdoc.sh"
   config.vm.provision :shell, privileged: false, :path => "setup-vim.sh"
+  config.vm.provision :shell, privileged: false, :path => "setup-emacs.sh"
 
   # Enable provisioning with chef solo, specifying a cookbooks path, roles
   # path, and data_bags path (all relative to this Vagrantfile), and adding
