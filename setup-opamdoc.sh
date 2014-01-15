@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -e
-PACKAGES="ssl core_extended async js_of_ocaml"
+PACKAGES="ssl core_extended async js_of_ocaml core_bench cohttp cryptokit menhir"
 
 # TODO: release opam-doc.0.3 to not need this
 opam pin opam-doc git://github.com/ocamllabs/opam-doc
